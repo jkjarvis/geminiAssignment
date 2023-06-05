@@ -135,3 +135,16 @@ class MixerUser {
     this.outputAddressAllocation[outputAddress] = allocation;
   }
 }
+
+
+// create a mixer instance
+const mixer = new Mixer();
+
+// add the user to the mixer
+mixer.addUser("address123", ["address456", "address789"]);
+
+// create a transaction 
+mixer.transaction("address123", 40);
+
+// send the required coins to the output addresses
+mixer.transactToOutputAddresses();
